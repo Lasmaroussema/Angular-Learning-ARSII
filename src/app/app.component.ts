@@ -8,15 +8,13 @@ import { SpacesPipe } from './spaces.pipe';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,FormsModule,CommonModule,HighlightDirective,SpacesPipe],
+  imports: [FormsModule,CommonModule,HighlightDirective,SpacesPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'        
 })
 export class AppComponent {
 ImagePath: any;
-OnClick() {
-throw new Error('Method not implemented.');
-}
+
   title = 'angularP';
   isValid:boolean=true;
   table=[1,2,3,4,5,6];

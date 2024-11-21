@@ -11,7 +11,7 @@ export class HighlightDirective {
   @HostListener('mouseenter') OnMouseEnter(){
     this.changeColor('blue');
   }
-  @HostListener('mouseenter') OnMouseLeave(){
+  @HostListener('mouseleave') OnMouseLeave(){
     this.changeColor('');
   }
   
