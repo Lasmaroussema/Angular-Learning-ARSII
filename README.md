@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Important notes 
--> Don't forget to import "FormsModule" for The DataBinding process and the "CommonModule" to use the Attribute and the Structural Directives 
+-> Don't forget to import "FormsModule" for The DataBinding process and the "CommonModule" to use the Attribute and the Structural Directives and the default pipes 
