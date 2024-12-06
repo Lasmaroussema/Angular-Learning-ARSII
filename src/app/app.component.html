@@ -1,12 +1,14 @@
-<input [(ngModel)]="user.name" />
+ <input [(ngModel)]="user.name" />
 
 <h1  >{{user.name | space  }}</h1>
 <h1  >{{user.name | uppercase  }}</h1>
-<h1 hightlight >{{user.name   }}</h1>
+<h1 hightlight >{{user.name   }}</h1> 
 <h1>{{user.age | currency:'USD'}}</h1>
 
 <button (click)="increment()" >increment</button>
 <button (click)="decrement()" >decrement</button>
 
 <button [style.backgroundColor]="getButtonColor()" >age</button>
+ 
+<!-- <app-parent></app-parent> -->
 

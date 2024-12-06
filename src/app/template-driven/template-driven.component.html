@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>Contact Us</h2>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="fullName">Full Name:</label>
+      <input 
+        type="text" 
+        id="fullName" 
+        name="fullName" 
+        [(ngModel)]="userData.fullName" 
+        required 
+        #fullName="ngModel" />
+      @if (fullName.invalid && (fullName.dirty || fullName.touched)) {
+        <div class="error">
+          Full Name is required.
+        </div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        [(ngModel)]="userData.email" 
+        required 
+        email 
+        #emailControl="ngModel" />
+      @if (emailControl.invalid && (emailControl.dirty || emailControl.touched)) {
+        <div class="error">
+          A valid email is required.
+        </div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        [(ngModel)]="userData.message" 
+        required></textarea>
+      @if (!userData.message && userForm.submitted) {
+        <div class="error">
+          Message is required.
+        </div>
+      }
+    </div>
+
+    <button type="submit" [disabled]="userForm.invalid">Send</button>
+  </form>
+</div>

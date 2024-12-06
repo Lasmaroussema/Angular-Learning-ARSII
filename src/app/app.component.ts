@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { HighlightDirective } from './Highlight.directive';
 import { SpacesPipe } from './spaces.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule,CommonModule,HighlightDirective,SpacesPipe],
+  imports: [FormsModule,CommonModule,HighlightDirective,SpacesPipe,ParentComponent,ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'        
 })
